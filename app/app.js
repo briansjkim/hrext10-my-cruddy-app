@@ -55,17 +55,17 @@ $(document).ready(function() {
   $('.create').click(function() {
     if (getKeyInput() !== '' && getValueInput() !== '') {
       if (keyExists(getKeyInput())) {
-        if(confirm('key already exists in database, do you want to update instead?')) {
+        if(confirm('Task already exists in database, do you want to update instead?')) {
           updateItem(getKeyInput(), getValueInput());
           showDatabaseContents();
-        }
+        } 
       } else {
         createItem(getKeyInput(), getValueInput());
         showDatabaseContents();
         resetInputs();
       }
     } else  {
-      alert('key and value must not be blank');
+      alert('Task and Date must not be blank');
     }
   });
 
@@ -76,10 +76,10 @@ $(document).ready(function() {
         showDatabaseContents();
         resetInputs();
       } else {
-        alert('key does not exist in database');
+        alert('Task does not exist in database');
       }
     } else {
-      alert('key and value must not be blank');
+      alert('Task and Date must not be blank');
     }
   });
 
@@ -90,10 +90,10 @@ $(document).ready(function() {
         showDatabaseContents();
         resetInputs();
       } else {
-        alert('key does not exist in database');
+        alert('Task does not exist in database');
       }
     } else {
-      alert('key must not be blank');
+      alert('Task must not be blank');
     }
   });
 
@@ -102,7 +102,7 @@ $(document).ready(function() {
   })
 
   $('.clear').click(function() {
-    if (confirm('WARNING: Are you sure you want to clear the database? \n                THIS ACTION CANNOT BE UNDONE')) {
+    if (confirm('EXTRA WARNING: Are you sure you want to clear the database? \n                THIS ACTION CANNOT BE UNDONE')) {
       clearDatabase();
       showDatabaseContents();
     }
