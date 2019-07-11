@@ -64,8 +64,8 @@ $(document).ready(function() {
         showDatabaseContents();
         resetInputs();
       }
-    } else  {
-      alert('Task and Date must not be blank');
+    } else {
+      alert('Task and/or Day must not be blank');
     }
   });
 
@@ -79,7 +79,7 @@ $(document).ready(function() {
         alert('Task does not exist in database');
       }
     } else {
-      alert('Task and Date must not be blank');
+      alert('Task and/or Day must not be blank');
     }
   });
 
